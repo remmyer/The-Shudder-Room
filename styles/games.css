@@ -169,7 +169,12 @@ so I looked up how to animate linear backgrounds, and found this one.*/
     margin-bottom:0;
 }
 
-footer{
+iframe{
+    border-radius:10px;
+    box-shadow:0px 0px 5px 5px rgb(255, 0, 0);
+}
+
+footer ol, footer p{
     text-align:left;
 }
 
@@ -198,5 +203,13 @@ footer a{
 
   .gamesContainer p{
     font-size:1.2rem;
+  }
+
+  #game-history img{
+    width:10em;
+  }
+  iframe{
+    width:12em;
+    height:6em;
   }
 }
