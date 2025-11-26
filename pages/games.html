@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, intitial-scale=1" />
     <title>Top Picks | Games</title>
     <link rel="stylesheet" type="text/css" href="../styles/games.css">
-    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap">
   </head>
 
-  <body>
+  <body id="gamesBody">
     <header>
       <p>THE SHUDDER ROOM</p>
     </header>
@@ -36,15 +36,20 @@
 
       <article id="game-genres">
       <h2 >Genres</h2>
-        <a href="">Survival</a>
-        <p>Survival horrors are games where you play as a character who's trying to stay alive in a situation given</p>
-        <a href="">Psychological</a>
-        <p>Psychological horrors are games that take advantage of the player's psychological, and mental state as a form of horror</p>
-        <a href="">Jump scare</a>
+       <dl>
+          <dt><a href="">Survival</a></dt>
+          <dd>Survival horrors are games where you play as a character who's trying to stay alive in a given situation.</dd>
+
+          <dt><a href="">Psychological</a></dt>
+          <dd>Psychological horrors are games that take advantage of the player's psychological and mental state as a form of horror.</dd>
+
+          <dt><a href="">Jump scare</a></dt>
+          <dd>Jump scare games are part of the horror genre where the game may randomly pop up certain entities or objects to scare the player by taking them off guard.</dd>
+        </dl>
       </article>
 
       <article class="gamesContainer" id="game-recommendations">
-      <h2>Top 10 recommendations</h2>
+      <h2>TOP 10 PICKS</h2>
 
       <article class="gamesList">
           <figure><img alt="Resident Evil 4 Remake Game Poster" src="../assets/covers/re4.jpg"></figure>
@@ -58,7 +63,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Silent Hill 3 Game Box art with Image of a girl with short blonde hair in distress" src="../assets/covers/sh3.webp"><figcaption>Silent Hill 3 Box Art licensed by <a href="https://silenthill.fandom.com/wiki/Silent_Hill_3?file=SilentHill3Boxart.png">KONAMI, in Silent Hill Fandom</a> under fair use</figcaption></figure>
+          <figure><img alt="Silent Hill 3 Game Box art with Image of a girl with short blonde hair in distress" src="../assets/covers/sh3.webp"></figure>
         <section>
           <h3><em>9.</em> Silent Hill 3</h3>
           <h4>Survival, Psychological, Third-Person</h4>
@@ -69,7 +74,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Silent Hill 2 Remake Game Poster with image of a man in the fog walking towards the image of a woman's face in the sky" src="../assets/covers/sh2.jpg"><figcaption>Silent Hill 2 Remake Poster licensed by <a href="https://en.wikipedia.org/wiki/File:Silent_Hill_2_remake_cover.jpg#/media/File:Silent_Hill_2_remake_cover.jpg">KONAMI, in WikiMedia</a> under fair use</figcaption></figure>
+          <figure><img alt="Silent Hill 2 Remake Game Poster with image of a man in the fog walking towards the image of a woman's face in the sky" src="../assets/covers/sh2.jpg"></figure>
         <section>
           <h3><em>8.</em> Silent Hill 2 Remake</h3>
           <h4>Survival, Psychological, Third-Person</h4>
@@ -79,7 +84,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Clock Tower 3 Game Box Art featuring image of a blonde girl's face in shock" src="../assets/covers/ct3.jpg"><figcaption>Clock Tower 3 Box Art licensed by <a href="https://en.wikipedia.org/wiki/Clock_Tower_3#/media/File:Clocktower_3.jpg">CAPCOM, in WikiMedia</a> under fair use</figcaption></figure>
+          <figure><img alt="Clock Tower 3 Game Box Art featuring image of a blonde girl's face in shock" src="../assets/covers/ct3.jpg"></figure>
         <section>
           <h3><em>7.</em> Clock Tower 3</h3>
           <h4>Survival, Psychological, Third-Person</h4>
@@ -89,7 +94,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Rule of Rose game box art" src="../assets/covers/ror.jpg"><figcaption>Rule of Rose Box Art licensed by <a href="https://en.wikipedia.org/wiki/Rule_of_Rose#/media/File:RuleofRose.jpg">ATLUS, in WikiMedia</a> under fair use</figcaption></figure>
+          <figure><img alt="Rule of Rose game box art" src="../assets/covers/ror.jpg"></figure>
         <section>
           <h3><em>6.</em> Rule of Rose </h3>
           <h4>Survival, Psychological, Third-Person</h4>
@@ -100,7 +105,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Five Nights at Freddy's 4 cover art" src="../assets/covers/fnaf4.jpg"><figcaption>Five Nights at Freddy's 4 Cover licensed by <a href="https://newzoo.com/games/five-nights-at-freddys-4">Scott Cawthon, on newzoo</a> under fair use</figcaption></figure>
+          <figure><img alt="Five Nights at Freddy's 4 cover art" src="../assets/covers/fnaf4.jpg"></figure>
         <section>
           <h3><em>5.</em> Five Nights at Freddy's 4</h3>
           <h4>Survival, Jump scare, First-Person</h4>
@@ -111,7 +116,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Resident Evil 2 Remake Poster featuring a male police officer, and a woman wearing a pink jacket in a zombie invasion" src="../assets/covers/re2.jpg"><figcaption>Resident Evil 2 Remake Poster licensed by <a href="https://en.wikipedia.org/wiki/Resident_Evil_2_(2019_video_game)#/media/File:Resident_Evil_2_Remake.jpg">CAPCOM, in WikiMedia</a> under fair use</figcaption></figure>
+          <figure><img alt="Resident Evil 2 Remake Poster featuring a male police officer, and a woman wearing a pink jacket in a zombie invasion" src="../assets/covers/re2.jpg"></figure>
         <section>
           <h3><em>4.</em> Resident Evil 2 Remake</h3>
           <h4>Survival, Puzzle, Third-Person Shooter</h4>
@@ -122,7 +127,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Outlast Game Cover featuring an evil creature smiling towards the camera" src="../assets/covers/outlast.jpg"><figcaption>Outlast Cover licensed by <a href="https://en.wikipedia.org/wiki/Outlast#/media/File:Outlast_cover.jpg">Red Barrels, in WikiMedia</a> under fair use</figcaption></figure>
+          <figure><img alt="Outlast Game Cover featuring an evil creature smiling towards the camera" src="../assets/covers/outlast.jpg"></figure>
         <section>
           <h3><em>3.</em> Outlast</h3>
           <h4>Survival, Psychological, Jump scare, First-Person</h4>
@@ -132,7 +137,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Resident Evil 7 Poster featuring a little girl in front of a big house" src="../assets/covers/re7.jpg"><figcaption>Resident Evil 7: BIOHAZARD Poster licensed by <a href="https://en.wikipedia.org/wiki/Resident_Evil_7:_Biohazard#/media/File:Resident_Evil_7_cover_art.jpg">CAPCOM, in WikiMedia</a> under fair use</figcaption></figure>
+          <figure><img alt="Resident Evil 7 Poster featuring a little girl in front of a big house" src="../assets/covers/re7.jpg"></figure>
         <section>
           <h3><em>2.</em> Resident Evil 7: BIOHAZARD</h3>
           <h4>Survival, Psychological, FPS</h4>
@@ -143,7 +148,7 @@
       </article>
 
       <article class="gamesList">
-          <figure><img alt="Ready or Not game poster featuring portrait of a SWAT member holding a firearm" src="../assets/covers/ron.jpg"><figcaption>Ready or Not licensed by <a href="https://www.steamgriddb.com/grid/173502">VOID Interactive, on SteamGridDB</a> under fair use</figcaption></figure>
+          <figure><img alt="Ready or Not game poster featuring portrait of a SWAT member holding a firearm" src="../assets/covers/ron.jpg"></figure>
         <section>
           <h3><em>1.</em> Ready Or Not</h3>
           <h4>Realistic, Tactical, FPS, Horror </h4>
@@ -162,7 +167,6 @@
 
       <figure>
         <img alt="Poster of a T-Rex running, game cover of 3D Monster Maze" src="../assets/covers/3dmm.jpg">
-        <figcaption>3D Monster Maze box art licensed by <a href="https://en.wikipedia.org/wiki/3D_Monster_Maze#/media/File:3DMonsterMaze.JKGS.tape-cover.jpg">Scanned by Simon and Susan Holdsworth on WikiMedia</a></figcaption>
       </figure>
       </article>
 
@@ -177,17 +181,17 @@
       <h4>MADE BY MOHIMA</h4>
       <p>Media Attribution</p>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Resident Evil 4 Remake Poster licensed by <a href="https://en.wikipedia.org/wiki/File:Resident_Evil_4_remake_cover_art.jpg#/media/File:Resident_Evil_4_remake_cover_art.jpg">CAPCOM, on WikiMedia</a> under fair use</li>
+        <li>Silent Hill 3 Box Art licensed by <a href="https://silenthill.fandom.com/wiki/Silent_Hill_3?file=SilentHill3Boxart.png">KONAMI, in Silent Hill Fandom</a> under fair use</li>
+        <li>Silent Hill 2 Remake Poster licensed by <a href="https://en.wikipedia.org/wiki/File:Silent_Hill_2_remake_cover.jpg#/media/File:Silent_Hill_2_remake_cover.jpg">KONAMI, in WikiMedia</a> under fair use</li>
+        <li>Clock Tower 3 Box Art licensed by <a href="https://en.wikipedia.org/wiki/Clock_Tower_3#/media/File:Clocktower_3.jpg">CAPCOM, in WikiMedia</a> under fair use</li>
+        <li>Rule of Rose Box Art licensed by <a href="https://en.wikipedia.org/wiki/Rule_of_Rose#/media/File:RuleofRose.jpg">ATLUS, in WikiMedia</a> under fair use</li>
+        <li>Five Nights at Freddy's 4 Cover licensed by <a href="https://newzoo.com/games/five-nights-at-freddys-4">Scott Cawthon, on newzoo</a> under fair use</li>
+        <li>Resident Evil 2 Remake Poster licensed by <a href="https://en.wikipedia.org/wiki/Resident_Evil_2_(2019_video_game)#/media/File:Resident_Evil_2_Remake.jpg">CAPCOM, in WikiMedia</a> under fair use</li>
+        <li>Outlast Cover licensed by <a href="https://en.wikipedia.org/wiki/Outlast#/media/File:Outlast_cover.jpg">Red Barrels, in WikiMedia</a> under fair use</li>
+        <li>Resident Evil 7: BIOHAZARD Poster licensed by <a href="https://en.wikipedia.org/wiki/Resident_Evil_7:_Biohazard#/media/File:Resident_Evil_7_cover_art.jpg">CAPCOM, in WikiMedia</a> under fair use</li>
+        <li>Ready or Not licensed by <a href="https://www.steamgriddb.com/grid/173502">VOID Interactive, on SteamGridDB</a> under fair use</li>
+        <li>3D Monster Maze box art licensed by <a href="https://en.wikipedia.org/wiki/3D_Monster_Maze#/media/File:3DMonsterMaze.JKGS.tape-cover.jpg">Scanned by Simon and Susan Holdsworth on WikiMedia</a></li>
       </ul>
     </footer>
   </body>

@@ -1,4 +1,38 @@
 /* GAMES PAGE */
+#gamesBody{
+    background: linear-gradient(to right, #180000, #100000, #240000, #270000);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.gamesMain a:visited{
+    color:red;
+}
+
+.gamesMain a:active{
+    color:black;
+}
+
+.gamesMain a:hover{
+    text-decoration: underline;
+}
+
+/*The following code was taken from https://codepen.io/P1N2O/pen/pyBNzX in hopes to make a more visually appealing background, 
+so I looked up how to animate linear backgrounds, and found this one.*/
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*End quote*/
 
 .gameJump{
   display:flex;
@@ -7,6 +41,9 @@
 
 .gameJump a{
     margin-bottom:1em;
+    padding:0.5em;
+    background-color:rgb(32, 0, 0);
+    border-radius:10px;
 }
 
 .gamesMain h2{
@@ -44,11 +81,13 @@
   background-size: 400% 400%;
   margin-bottom:3em;
   border-radius:30px;
+  padding:1em;
 }
 
 .gamesList h3{
   font-size:2rem;
   text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
+  margin-top:0;
 }
 
 .gamesList h4{
@@ -65,13 +104,6 @@
   padding:0;
 }
 
-figcaption{
-    font-size:1rem;
-}
-figcaption a{
-    font-size:1rem;
-}
-
 .gamesContainer a{
   text-decoration:none;
   font-weight:500;
@@ -82,15 +114,57 @@ figcaption a{
 .gamesList img{
   border-radius:20px;
   box-shadow:8px 8px 8px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
 }
 
 .gamesContainer article{
   scale:.8;
   opacity:0;
   animation: fade-in linear forwards;
-  animation-range-start:entry;
-  animation-range-end:contain 100px;
-  animation-timeline: view();
+/*The following animation properties do not work on FireFox, instead it will display as static*/
+
+  animation-range-start:entry;/*Animation starts once the article enters my screen*/
+  animation-range-end:contain 100px; /*Animation starts ending once article is fully covered on my screen*/
+  animation-timeline: view(); /*This allows animation that responds to the user's scrollpoint on the page, and animates once said article is viewed*/
+}
+
+#game-history{
+    margin:auto;
+    background-color:red;
+    border-radius:10px;
+    background:linear-gradient(to bottom right,#2e0000, #9b0000, #630000);
+    background-size: 400% 400%;
+    padding:1em;
+    box-shadow:8px 8px 8px rgba(0, 0, 0, 0.5);
+    width:70%;
+}
+
+#game-history img{
+    border-radius:20px;
+    box-shadow:8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+#game-genres{
+    background-color:red;
+    border-radius:10px;
+    background:linear-gradient(to bottom right,#2e0000, #9b0000, #630000);
+    background-size: 400% 400%;
+    padding:1em;
+    box-shadow:8px 8px 8px rgba(0, 0, 0, 0.5);
+    font-size:1.4rem;
+}
+
+#game-genres h2{
+    margin-bottom:0;
+}
+
+footer{
+    text-align:left;
+}
+
+footer a{
+    color:red;
 }
 
 @keyframes fade-in{
