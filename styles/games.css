@@ -5,6 +5,14 @@
 	animation: gradient 15s ease infinite;
 }
 
+#gamesBody dd{
+    margin-bottom:1em;
+}
+
+#gamesBody dt{
+    font-weight:700;
+}
+
 .gamesMain a:visited{
     color:red;
 }
@@ -16,6 +24,7 @@
 .gamesMain a:hover{
     text-decoration: underline;
 }
+
 
 /*The following code was taken from https://codepen.io/P1N2O/pen/pyBNzX in hopes to make a more visually appealing background, 
 so I looked up how to animate linear backgrounds, and found this one.*/
@@ -44,6 +53,7 @@ so I looked up how to animate linear backgrounds, and found this one.*/
     padding:0.5em;
     background-color:rgb(32, 0, 0);
     border-radius:10px;
+    box-shadow:4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .gamesMain h2{
@@ -96,8 +106,8 @@ so I looked up how to animate linear backgrounds, and found this one.*/
 
 .gamesList em{
   font-style: normal;
-  font-size:3rem;
-  text-shadow: 2px 2px 6px red;
+  font-size:2.4rem;
+  text-shadow: 2px 2px 6px rgb(129, 0, 0);
 }
 
 .gamesList figure{
