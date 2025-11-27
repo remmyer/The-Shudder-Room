@@ -1,0 +1,31 @@
+/*Mohima*/
+fieldset{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset button{
+    padding:10px;
+    font-family: Nunito, Arial;
+    font-weight:700;
+    font-size:0.8rem;
+    border-radius:10px;
+    width:8em;
+}
+
+fieldset ul{
+    list-style: none;
+}
+
+fieldset input, #suggestions{
+    margin-bottom:2em;
+    margin-top:0.8em;
+    border-radius: 6px;
+    padding:0.5em;
+}
+
+input::placeholder{
+    font-family:Nunito, Arial;
+}

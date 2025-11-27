@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Mohima-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intitial-scale=1" />
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="../styles/quiz.css">
+    <link rel="stylesheet" type="text/css" href="../styles/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap">
+    <script src="../scripts/quiz.js" defer></script>
+</head>
+
+  <body>
+    <header>
+      <p>THE SHUDDER ROOM</p>
+    </header>
+
+    <nav>
+      <a class="navLink" href="movies.html">MOVIES/TV</a>
+      <a class="navLink" href="games.html">GAMES</a>
+      <a id="logo" href="../index.html"><img alt="" src="../assets/logo.png"/></a>
+      <a class="navLink" href="quiz.html">QUIZ</a>
+      <a class="navLink" href="random.html">RANDOMIZER</a>
+    </nav>
+   
+    <footer>
+
+        
+        <fieldset>
+            <ul>
+                <label for="name">Name: </label>
+                <li><input id="name" type="text" placeholder="Your Name" required></li>
+           
+                <label for="email">Email: </label>
+                <li><input id="email" type="email" placeholder="johndoe@dawsoncollege.qc.ca" required></li>
+                
+                <label for="suggestions">Suggestion: </label>
+                <li><textarea id="suggestions" required></textarea></li>
+            </ul>
+
+            <button id="sendButton">Send</button>
+
+            <h3 id="fieldset-msg">&nbsp;</h3>
+
+            
+        </fieldset>
+
+    </footer>
+  </body>
+</html>
