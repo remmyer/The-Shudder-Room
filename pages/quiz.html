@@ -3,7 +3,7 @@
 <!--Mohima-->
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, intitial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Quiz</title>
     <link rel="stylesheet" type="text/css" href="../styles/quiz.css">
     <link rel="stylesheet" type="text/css" href="../styles/common.css">
@@ -25,29 +25,98 @@
       <a class="navLink" href="quiz.html">QUIZ</a>
       <a class="navLink" href="random.html">RANDOMIZER</a>
     </nav>
-   
-    <footer>
 
-        
+    <main>
+
+      <section id="startScreen">
+        <h2>Let's test your horror game knowledge!</h2>
+        <button>START</button>
+      </section>
+
+      <section id="quizScreen">
+        <h2 id="questionNum">Question 1/10</h2>
+        <h2 id="question">What makes Ready or Not frightening, despite not being labeled horror?</h2>
+        <img id="quizImage" alt="" src="../assets/quizPics/ron.png">
+        <section>
+        <fieldset id="quizFieldset">
+          <ul>
+              <label class="choice"><input id="c1" type="radio" name="choice" value="0" required>Terrifying graphics</label>
+
+              <label class="choice"><input id="c2" type="radio" name="choice" value="1">Realism</label>
+
+              <label class="choice"><input id="c3" type="radio" name="choice" value="2">Extraterrestrial creatures</label>
+
+              <label class="choice"><input id="c4" type="radio" name="choice" value="3">Constant loud music</label>
+
+          </ul>
+
+          <button id="nextButton">NEXT</button>
+        </fieldset>
+        </section>
+
+      </section>
+
+      <section id="scoreScreen">
+        <h2>Thank you for playing!</h2>
+        <h2>Your Score</h2>
+        <h2 id="score">&nbsp;</h2>
+        <p id="scoreMessage">&nbsp;</p>
+        <button id="tryAgainButton">TRY AGAIN</button>
+        <button id="toCheckButton">NEXT</button>
+      </section>
+
+      <section id="checkboxScreen">
         <fieldset>
-            <ul>
-                <label for="name">Name: </label>
-                <li><input id="name" type="text" placeholder="Your Name" required></li>
-           
-                <label for="email">Email: </label>
-                <li><input id="email" type="email" placeholder="johndoe@dawsoncollege.qc.ca" required></li>
-                
-                <label for="suggestions">Suggestion: </label>
-                <li><textarea id="suggestions" required></textarea></li>
-            </ul>
-
-            <button id="sendButton">Send</button>
-
-            <h3 id="fieldset-msg">&nbsp;</h3>
-
-            
+        <label><input type="checkbox" value="Resident Evil 4 Remake">Resident Evil 4 Remake</label><br>
+        <label><input type="checkbox" value="Silent Hill 3">Silent Hill 3</label><br>
+        <label><input type="checkbox" value="Silent Hill 2 Remake">Silent Hill 2 Remake</label><br>
+        <label><input type="checkbox" value="Clock Tower 3">Clock Tower 3</label><br>
+        <label><input type="checkbox" value="Rule of Rose">Rule of Rose</label><br>
+        <label><input type="checkbox" value="FNAF 4">FNAF 4</label><br>
+        <label><input type="checkbox" value="RE2 Remake">Resident Evil 2 Remake</label><br>
+        <label><input type="checkbox" value="Outlast">Outlast</label><br>
+        <label><input type="checkbox" value="Ready or Not">Ready or Not</label><br>
+        <label><input type="checkbox" value="Resident Evil 7">Resident Evil 7</label><br>          
         </fieldset>
 
+        <p id="checkItemsMessage">&nbsp;</p>
+
+        <button id="checkSubmit">Submit</button>
+        <button id="checkNext">Next</button>
+
+      </section>
+
+        <section id="feedbackScreen">
+          <fieldset>
+            <h2>What are your favourite games if you play any?</h2>
+            <textarea></textarea>
+
+            <h2>Do you have any feedback?</h2>
+            <textarea></textarea>           
+
+            <button>Submit</button>
+          </fieldset>
+        </section>
+
+    </main>
+   
+    <footer>
+      <hr>
+      <h4>MADE BY MOHIMA</h4>
+      <hr>
+      <h4>Media Attribution</h4>
+      <ul>
+        <li>Ready or Not cover art licensed by <a href="https://store.epicgames.com/en-US/p/ready-or-not-d82a11">VOID Interactive, on Epic Games</a> under fair use.</li>
+        <li>Resident Evil official game screenshot licensed by <a href="https://store.steampowered.com/app/883710/Resident_Evil_2/">CAPCOM, on Steam</a> under fair use.</li>
+        <li> licensed by <a href="https://store.steampowered.com/app/238320/Outlast/"></a> under fair use.</li>
+        <li> licensed by <a href="https://store.steampowered.com/app/388090/Five_Nights_at_Freddys_4/"></a> under fair use.</li>
+        <li> licensed by <a href="https://bloody-disgusting.com/video-games/3647912/rule-rose-remains-one-centurys-misunderstood-horror-games/">ATLUS, on Bloody Disgusting</a> under fair use.</li>
+        <li> licensed by <a href="https://store.steampowered.com/app/2124490/SILENT_HILL_2/"></a> under fair use.</li>
+        <li> licensed by <a href="https://www.gamesradar.com/games/horror/silent-hill-3-designer-went-to-real-life-ruins-to-find-inspiration-for-the-horror-game-but-they-found-robbie-the-rabbits-inspiration-in-a-literal-mascot/">KONAMI, on gamesradar</a> under fair use.</li>
+        <li> licensed by <a href="https://store.steampowered.com/app/2050650/Resident_Evil_4/">CAPCOM, on Steam</a> under fair use.</li>
+        <li> licensed by <a href="https://store.steampowered.com/app/418370/Resident_Evil_7_Biohazard/">CAPCOM, on Steam</a> under fair use.</li>
+        <li>Clock Tower 3 Promo Image render licensed by <a href="https://www.mobygames.com/game/9141/clock-tower-3/promo/group-2152/image-28388/">CAPCOM, on MobyGames</a> under fair use.</li>
+      </ul>
     </footer>
   </body>
 </html>
