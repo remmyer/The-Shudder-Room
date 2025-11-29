@@ -2,8 +2,8 @@
 <html lang="en">
 <!--Mohima-->
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quiz</title>
     <link rel="stylesheet" type="text/css" href="../styles/quiz.css">
     <link rel="stylesheet" type="text/css" href="../styles/common.css">
@@ -21,7 +21,7 @@
     <nav>
       <a class="navLink" href="movies.html">MOVIES/TV</a>
       <a class="navLink" href="games.html">GAMES</a>
-      <a id="logo" href="../index.html"><img alt="" src="../assets/logo.png"/></a>
+      <a id="logo" href="../index.html"><img alt="" src="../assets/logo.png"></a>
       <a class="navLink" href="quiz.html">QUIZ</a>
       <a class="navLink" href="random.html">RANDOMIZER</a>
     </nav>
@@ -36,19 +36,18 @@
       <section id="quizScreen">
         <h2 id="questionNum">Question 1/10</h2>
         <h2 id="question">What makes Ready or Not frightening, despite not being labeled horror?</h2>
-        <img id="quizImage" alt="" src="../assets/quizPics/ron.png">
+        <img id="quizImage" alt="Red filter over image of criminals with firearms, and police officers defending civilians" src="../assets/quizPics/ron.png">
         <section>
         <fieldset id="quizFieldset">
-          <ul>
+          <section class="questions">
               <label class="choice"><input id="c1" type="radio" name="choice" value="0" required>Terrifying graphics</label>
 
-              <label class="choice"><input id="c2" type="radio" name="choice" value="1">Realism</label>
+              <label class="choice"><input id="c2" type="radio" name="choice" value="1">Constant loud music</label>
 
               <label class="choice"><input id="c3" type="radio" name="choice" value="2">Extraterrestrial creatures</label>
 
-              <label class="choice"><input id="c4" type="radio" name="choice" value="3">Constant loud music</label>
-
-          </ul>
+              <label class="choice"><input id="c4" type="radio" name="choice" value="3">Realism</label>
+          </section>
 
           <button id="nextButton">NEXT</button>
         </fieldset>
@@ -66,6 +65,7 @@
       </section>
 
       <section id="checkboxScreen">
+        <h2>What games on the list interested you the most?</h2>
         <fieldset>
         <label><input type="checkbox" value="Resident Evil 4 Remake">Resident Evil 4 Remake</label><br>
         <label><input type="checkbox" value="Silent Hill 3">Silent Hill 3</label><br>
@@ -94,7 +94,10 @@
             <h2>Do you have any feedback?</h2>
             <textarea></textarea>           
 
-            <button>Submit</button>
+            <p id="feedbackMessage">&nbsp;</p>
+
+            <button id="feedbackSubmit">Submit</button>
+            <button id="finalRetryButton">Retry Quiz</button>
           </fieldset>
         </section>
 

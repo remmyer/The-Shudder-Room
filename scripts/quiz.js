@@ -1,9 +1,6 @@
 'use strict'
 // Mohima
 
-
-
-
 // ARRAY CONTAINING QUESTION DATA
 
 const quizData = [
@@ -11,6 +8,7 @@ const quizData = [
         question: "What makes Ready or Not frightening, despite not being labeled horror?",
         questionNum: "Question 1/10",
         imgSrc: '../assets/quizPics/ron.png',
+        imgAlt: 'Red filter over image of criminals with firearms, and police officers defending civilians',
         options: ['A clown','Extraterrestrial creatures', 'Constant loud music', 'Realism'],
         answer: 3
     },
@@ -19,6 +17,7 @@ const quizData = [
         question: "What creature relentlessly stalks the player in Resident Evil 2 Remake?",
         questionNum: "Question 2/10",
         imgSrc: '../assets/quizPics/re2r.jpg',
+        imgAlt: 'Leon Kennedy, a police officer holding a shotgun, standing in front of a police department in foggy blue weather at night',
         options: ["Nemesis", "Pyramid Head", "Mr. X", "Zombie dog"],
         answer: 2
     },
@@ -27,6 +26,7 @@ const quizData = [
         question: "Where is Outlast set?",
         questionNum: "Question 3/10",
         imgSrc: '../assets/quizPics/outlast.jpg',
+        imgAlt: 'VHS recording of a sinister man located in the sewers behind wooden boxes, with green grainy filter',
         options: ["Abandoned school", "Mount Massive Asylum", "Forest camp", "A mall"],
         answer: 1
     },
@@ -35,6 +35,7 @@ const quizData = [
         question: "In FNAF 4, the player is:",
         questionNum: "Question 4/10",
         imgSrc: '../assets/quizPics/fnaf4.jpg',
+        imgAlt: 'A dusty yellow rabbit stuffed animal sitting on a chair in the end of a hallway being lit up by a flashlight',
         options: ["A child", "A guard", "A soldier", "A detective"],
         answer: 0
     },
@@ -43,6 +44,7 @@ const quizData = [
         question: "Rule of Rose centers on:",
         questionNum: "Question 5/10",
         imgSrc: '../assets/quizPics/ror.webp',
+        imgAlt: 'A blonde woman in a bun wearing a school uniform holding a revolver with an expression of fear, in a bathroom',
         options: ["Lauren, a preschool teacher","Penelope, a college student", "Rose, a child psychologist", "Jennifer, recovering childhood memories"],
         answer: 3
     },
@@ -51,6 +53,7 @@ const quizData = [
         question: "In the Silent Hill 2 Remake, James returns to Silent Hill because:",
         questionNum: "Question 6/10",
         imgSrc: '../assets/quizPics/sh2r.jpg',
+        imgAlt: 'A back view of a man in a green jacket holding a bat attempting to hit an unidentified monster with no arms in foggy weather',
         options: ["The Bakers called him", "A message from his deceased wife", "He gets a new job", "He gets nostalgic"],
         answer: 1
     },
@@ -59,6 +62,7 @@ const quizData = [
         question: "Silent Hill 3 follows the story of...",
         questionNum: "Question 7/10",
         imgSrc: '../assets/quizPics/sh3.webp',
+        imgAlt: 'A pink bunny mascot suit partially covered in blood as it sits on a rusty bench in an abandoned theme park',
         options: ["Heather", "Leon", "Shuichi", "Claire"],
         answer: 0
     },
@@ -67,6 +71,7 @@ const quizData = [
         question: "What makes the dark lab scene in Resident Evil 4 Remake scary?",
         questionNum: "Question 8/10",
         imgSrc: '../assets/quizPics/re4r.jpg',
+        imgAlt: 'A police officer walking towards an abandoned house in the middle of the forest at night in foggy weather',
         options: ["The excruciating puzzles", "The Regeneradors", "The lack of time", "Being chased by Mr. X"],
         answer: 1
     },
@@ -75,6 +80,7 @@ const quizData = [
         question: "Why is Resident Evil 7 considered scarier than the earlier games?",
         questionNum: "Question 9/10",
         imgSrc: '../assets/quizPics/re7.jpg',
+        imgAlt: 'Interior of a house in a swamp green filter',
         options: ["More zombies", "Horrible graphics", "First-person view", "No combat"],
         answer: 2
     },
@@ -83,10 +89,13 @@ const quizData = [
         question: "In Clock Tower 3, Alyssa is transported back to:",
         questionNum: "Question 10/10",
         imgSrc: '../assets/quizPics/ct3.jpg',
+        imgAlt: 'Image of a clock on a clock tower',
         options: ["Victorian London", "1950s Japan", "1950s America", "Medieval Europe"],
         answer: 3
     }
 ]
+
+// ARRAY CONTAINING DIFFERENT STYLES FOR EACH QUESTION
 
 const quizStyles = [
 
@@ -165,6 +174,7 @@ function loadQuestion(index) {
     questionNum.innerHTML = q.questionNum;
     question.innerHTML = q.question;
     questionImg.setAttribute('src', q.imgSrc);
+    questionImg.setAttribute('alt', q.imgAlt);
 }
 
 function loadOptions(index){
@@ -251,6 +261,8 @@ retryButton.addEventListener('click', retryQuiz);
 function retryQuiz(){
     quizScreen.style.display = 'block';
     scoreScreen.style.display = 'none';
+    feedbackScreen.style.display = 'none';
+    checkScreen.style.display = 'none';
 
     currentIndex = 0;
     score = 0;
@@ -273,13 +285,24 @@ function toCheckSection(){
 }
 
 const checkSubmit = document.querySelector('#checkSubmit');
+const feedbackSubmit = document.querySelector('#feedbackSubmit');
 const checkNext = document.querySelector('#checkNext');
-checkSubmit.addEventListener('click', thankText);
+checkSubmit.addEventListener('click', checkText);
+feedbackSubmit.addEventListener('click', feedText);
 
-function thankText(){
+function checkText(){
     const checkItemsMessage = document.querySelector('#checkItemsMessage');
-    checkItemsMessage.innerHTML = "Thank you!";
+    checkItemsMessage.innerHTML = "Awesome!";
     checkNext.style.display = "inline"
+}
+
+finalRetryButton.addEventListener('click', retryQuiz);
+
+function feedText(){
+    const finalRetryButton = document.querySelector('#finalRetryButton');
+    const feedbackMessage = document.querySelector('#feedbackMessage');
+    feedbackMessage.innerHTML = "Thank You!";
+    finalRetryButton.style.display = "block"
 }
 
 checkNext.addEventListener('click', toFeedback);

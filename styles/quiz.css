@@ -20,7 +20,7 @@ fieldset{
     padding:0.3em;
 }
 
-#quizScreen ul{
+.questions{
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -136,7 +136,7 @@ fieldset{
     transition: 0.2s ease;
 }
 
-#scoreScreen button:hover, #checkboxScreen button:hover, #feedbackScreen button:hover{
+#scoreScreen button:hover, #checkboxScreen button:hover, #feedbackScreen button:hover, #checkboxScreen label:hover{
     transition: 0.2s ease;
     box-shadow: 0px 0px 8px 2px rgb(255, 0, 0);
     cursor:pointer;
@@ -148,8 +148,28 @@ fieldset{
 }
 
 #checkboxScreen fieldset{
-    padding:4em;
+    width:50%;
+    margin:auto;
+    padding:1em;
     margin-bottom:1em;
+    font-size:1rem;
+}
+
+#checkboxScreen label{
+    display: flex;
+    border:1px solid white;
+    background:linear-gradient(to bottom right, rgb(100, 0, 0), rgb(150, 0, 0));
+    padding:1em;
+    border-radius:50px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+
+#checkboxScreen input[type="checkbox"]{
+    width:1.5em;
+    height:1.5em;
+    margin-right:2em;
 }
 
 #checkboxScreen button{
@@ -195,16 +215,9 @@ fieldset{
     transition: 0.2s ease;
 }
 
-
-
-/* button{
-    padding:10px;
-    font-family: Nunito, Arial;
-    font-weight:700;
-    font-size:0.8rem;
-    border-radius:10px;
-    width:8em;
-} */
+#finalRetryButton{
+    display:none;
+}
 
 fieldset ul{
     list-style: none;
