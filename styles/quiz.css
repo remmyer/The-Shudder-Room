@@ -48,7 +48,8 @@ fieldset{
     width:32em;
     border-radius:25px;
     border:1px solid white;
-    margin-bottom:1em;
+    margin:auto;
+     margin-bottom:1em;
 }
 
 #quizScreen label{
@@ -97,7 +98,8 @@ fieldset{
 }
 
 #quizScreen{
-    display:block;
+    display:flex;
+    flex-direction: column;
 }
 
 #scoreScreen{
@@ -144,6 +146,7 @@ fieldset{
 
 #checkboxScreen{
     display:none;
+    flex-direction: column;
     margin:1em auto;
 }
 
@@ -184,8 +187,11 @@ fieldset{
     border:1px solid white;
     color:white;
     transition: 0.8s ease;
+    margin:auto;
     margin-bottom:1em;
     transition: 0.2s ease;
+    display:flex;
+    justify-content: center;
 }
 
 
@@ -195,6 +201,9 @@ fieldset{
 
 #feedbackScreen{
     display:none;
+    flex-direction: column;
+    width:60%;
+    margin:auto;
     padding:2em;
 }
 
@@ -213,6 +222,8 @@ fieldset{
     margin-top:1em;
     margin-bottom:1em;
     transition: 0.2s ease;
+    display:flex;
+    justify-content: center;
 }
 
 #finalRetryButton{
@@ -264,21 +275,56 @@ footer a{
         color:white;
     }
 
-    @media (max-width:699px){
-        #quizScreen ul{
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, 1fr);
+    @media (max-width:1250px){
+    .questions{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
         }
+    }
 
+    @media (max-width:699px){
         #quizScreen section{
             flex-direction:column;
             font-size:1rem;
             font-weight:500;
+            width:80%;
         }
 
         #quizScreen button{
         font-size:1.2rem;
         }
+    }
+
+    @media (max-width:600px){
+    #quizScreen section{
+        flex-direction:column;
+        font-size:1rem;
+        font-weight:500;
+        width:90%;
+    }
+
+    #quizScreen button{
+    font-size:1rem;
+    }
+
+    }
+
+
+    @media (max-width:450px){
+    #quizScreen img{
+        width:18em;
+    }
+    #quizScreen section{
+        flex-direction:column;
+        font-size:1rem;
+        font-weight:500;
+        width:90%;
+    }
+
+    #quizScreen button{
+    font-size:1rem;
+    }
+
     }
 
 }

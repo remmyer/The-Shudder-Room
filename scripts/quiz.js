@@ -259,7 +259,7 @@ const retryButton = document.querySelector('#tryAgainButton');
 retryButton.addEventListener('click', retryQuiz);
 
 function retryQuiz(){
-    quizScreen.style.display = 'block';
+    quizScreen.style.display = 'flex';
     scoreScreen.style.display = 'none';
     feedbackScreen.style.display = 'none';
     checkScreen.style.display = 'none';
@@ -281,7 +281,7 @@ toCheckButton.addEventListener('click', toCheckSection);
 function toCheckSection(){
     quizScreen.style.display = 'none';
     scoreScreen.style.display = 'none';
-    checkScreen.style.display = 'block';
+    checkScreen.style.display = 'flex';
 }
 
 const checkSubmit = document.querySelector('#checkSubmit');
@@ -293,7 +293,7 @@ feedbackSubmit.addEventListener('click', feedText);
 function checkText(){
     const checkItemsMessage = document.querySelector('#checkItemsMessage');
     checkItemsMessage.innerHTML = "Awesome!";
-    checkNext.style.display = "inline"
+    checkNext.style.display = "flex"
 }
 
 finalRetryButton.addEventListener('click', retryQuiz);
@@ -302,7 +302,7 @@ function feedText(){
     const finalRetryButton = document.querySelector('#finalRetryButton');
     const feedbackMessage = document.querySelector('#feedbackMessage');
     feedbackMessage.innerHTML = "Thank You!";
-    finalRetryButton.style.display = "block"
+    finalRetryButton.style.display = "flex"
 }
 
 checkNext.addEventListener('click', toFeedback);
@@ -311,5 +311,5 @@ function toFeedback(){
     quizScreen.style.display = 'none';
     scoreScreen.style.display = 'none';
     checkScreen.style.display = 'none';
-    feedbackScreen.style.display  = 'block';
+    feedbackScreen.style.display  = 'flex';
 }
