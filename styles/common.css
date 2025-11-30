@@ -7,7 +7,7 @@ body {
 
 header p {
   background-image: linear-gradient(#ed0000, #7a0000);
-  background-clip: text; /*This property clips the gradient above onto the header h1 text*/
+  background-clip: text; /*This property clips the gradient above onto the header h1 text, learned on https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-clip*/
   color: transparent; /*The transparent value allows the gradient to clip to the text*/
   font-family: League Spartan, Arial;
   font-size: 4rem;

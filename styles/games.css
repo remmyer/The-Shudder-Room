@@ -132,7 +132,11 @@ so I looked up how to animate linear backgrounds, and found this one.*/
   scale:.8;
   opacity:0;
   animation: fade-in linear forwards;
-/*The following animation properties do not work on FireFox, instead it will display as static*/
+
+/*The following animation properties give errors on CSS validation services, because they do not work on FireFox,
+instead it will display as static, but won't break the website. It works on Chrome, Edge, Safari, and Opera.
+I got it from https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-range and https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-timeline
+I used it because I wanted specific scrolling animations, and found this way to be most convenient, since I don't know how to use javascript scroll animations*/
 
   animation-range-start:entry;/*Animation starts once the article enters my screen*/
   animation-range-end:contain 100px; /*Animation starts ending once article is fully covered on my screen*/

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intitial-scale=1" />
+    <title>Top Picks | Movies</title>
+
+    <link rel="stylesheet" type="text/css" href="../styles/movies.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="../scripts/movies.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <p>THE SHUDDER ROOM</p>
+    </header>
+
+    <nav>
+      <a class="navLink" href="movies.html">MOVIES/TV</a>
+      <a class="navLink" href="games.html">GAMES</a>
+      <a id="logo" href="../index.html">
+        <img alt="" src="../assets/logo.png" />
+      </a>
+      <a class="navLink" href="pages/quiz.html">QUIZ</a>
+      <a class="navLink" href="random.html">RANDOMIZER</a>
+    </nav>
+
+    <main>
+      <section class="movie-picks">
+        <div class="carousel-wrapper">
+          <button id="carousel-left" class="carousel-arrow left">
+            <span class="material-symbols-outlined">arrow_back_ios_new</span>
+          </button>
+
+          <div id="movie-carousel" class="movie-carousel"></div>
+
+          <button id="carousel-right" class="carousel-arrow right">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </button>
+        </div>
+
+        <article id="movie-detail" class="movie-detail">
+          <div class="detail-video">
+            <iframe
+              id="movie-trailer"
+              src=""
+              title="Movie trailer"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="detail-text">
+            <h3 id="movie-title">Select a movie</h3>
+            <p id="movie-desc">
+              Click a poster above to see the description and trailer.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>MADE BY MOHIMA &amp; VIVIANE</footer>
+  </body>
+</html>

@@ -1,0 +1,366 @@
+body {
+  background: radial-gradient(#1f0202, #000000);
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+header p {
+  background-image: linear-gradient(#ed0000, #7a0000);
+  background-clip: text; /*This property clips the gradient above onto the header h1 text*/
+  color: transparent; /*The transparent value allows the gradient to clip to the text*/
+  font-family: League Spartan, Arial;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  font-family: Montserrat, Arial;
+  font-size: 1.5rem;
+  margin: auto;
+  border-bottom: 0.2em solid rgba(255, 0, 0, 0.3);
+  border-top: 0.2em solid rgba(255, 0, 0, 0.3);
+  padding: 0.5em;
+}
+
+nav a {
+  color: white;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 1em;
+  text-decoration: none;
+  transition: ease-in;
+  transition: 0.25s;
+}
+
+.navLink:hover {
+  font-weight: 500;
+  background-color: #440000;
+  transition: ease-in;
+  transition: 0.25s;
+}
+
+a#logo {
+  padding: 0;
+}
+
+#logo img {
+  border-radius: 1em;
+  width: 5em;
+  margin: 0;
+  padding: 0;
+  transition: width 0.2s; /*Applies animation that changes width of image for 0.2 seconds*/
+}
+
+#logo img:hover {
+  width: 5.5em; /*On hover, it enlarges the image with a smooth transition*/
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat, Arial;
+  width: 80%;
+  margin: auto;
+}
+
+main ul {
+  list-style-type: none;
+}
+
+main h1 {
+  font-size: 3rem;
+}
+
+main p {
+  font-size: 1.5rem;
+}
+
+#titleStyle {
+  background-image: linear-gradient(#ed0000, #7a0000);
+  background-clip: text; /*This property clips the gradient above onto the header h1 text*/
+  color: transparent; /*The transparent value allows the gradient to clip to the text*/
+}
+
+.pageLinks {
+  margin: auto;
+  flex-wrap: wrap;
+  width: 95%;
+}
+
+.pageLinks img {
+  width: 30em;
+  border-radius: 20px;
+  margin: 1em;
+  box-shadow: 0px 0px 4px 4px rgba(255, 0, 0, 0.5);
+  transition: ease-in 0.2s; /*Applies animation for 0.2 seconds*/
+}
+
+.pageLinks img:hover {
+  transform: translateY(
+    -0.8em
+  ); /*Applies translation animation on hover on the Y axis by -0.8em*/
+}
+
+footer {
+  padding: 1.2em;
+  text-align: center;
+  font-family: Montserrat, Arial;
+  font-weight: 500;
+}
+.movie-picks {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/*Keeps keeps the bottom trailer+description centered */
+.movie-detail {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.material-symbols-outlined {
+  font-size: 20px;
+}
+/* Wraps arrows + poster carousel */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* The scrollable poster row */
+.movie-carousel {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 1rem;
+  max-width: 80%; /* prevents stretching full page */
+  margin: 0 auto; /* centers the row inside the page */
+}
+
+/* Each poster button */
+.movie-thumb {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-family: Montserrat, Arial;
+  text-align: center;
+}
+
+.movie-thumb img {
+  width: 140px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.movie-thumb img:hover {
+  transform: translateY(-6px);
+}
+
+.carousel-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow .material-symbols-outlined {
+  font-size: 24px;
+}
+/*MOVIES PAGE LAYOUT*/
+
+.movie-picks {
+  margin: 3rem auto;
+  max-width: 1100px;
+  padding: 2rem 2.5rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(
+    circle at top,
+    rgba(120, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.96)
+  );
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9);
+}
+
+/*TOP: CAROUSEL WITH ARROWS*/
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* scrollable row of posters */
+.movie-carousel {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 1rem 1.5rem;
+  max-width: 80%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
+  scrollbar-width: thin;
+}
+
+/* each poster button */
+.movie-thumb {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-family: Montserrat, Arial;
+  text-align: center;
+  min-width: 140px;
+}
+
+.movie-thumb img {
+  width: 140px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  display: block;
+  margin-bottom: 0.4rem;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  opacity: 0.85;
+}
+
+/* hover effect */
+.movie-thumb img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+  opacity: 1;
+}
+
+/* title under each poster */
+.movie-thumb p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ACTIVE / SELECTED POSTER */
+.movie-thumb.active img {
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.95);
+  opacity: 1;
+  transform: translateY(-4px);
+}
+.movie-thumb.active p {
+  font-weight: 600;
+}
+
+/* arrows beside carousel */
+.carousel-arrow {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 0, 0, 0.7);
+  border-radius: 50%;
+  padding: 0.55rem;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.carousel-arrow .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.carousel-arrow:hover {
+  transform: translateY(-2px);
+  background: rgba(130, 0, 0, 0.9);
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+}
+
+/* ===== BOTTOM: TRAILER + DESCRIPTION ===== */
+
+.movie-detail {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+.detail-video iframe {
+  width: 430px;
+  height: 242px; /* ~16:9 */
+  border-radius: 18px;
+  border: 2px solid rgba(255, 0, 0, 0.7);
+  box-shadow: 0 0 22px rgba(255, 0, 0, 0.6);
+  background: black;
+}
+
+.detail-text {
+  max-width: 420px;
+  text-align: left;
+}
+
+.detail-text h3 {
+  font-size: 2rem;
+  margin: 0 0 0.4rem 0;
+}
+
+.detail-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .movie-picks {
+    padding: 1.5rem;
+  }
+
+  .movie-carousel {
+    max-width: 100%;
+  }
+
+  .detail-video iframe {
+    width: 100%;
+    max-width: 360px;
+    height: 202px;
+  }
+
+  .movie-detail {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detail-text {
+    text-align: center;
+  }
+}
