@@ -190,13 +190,17 @@ fieldset{
     margin:auto;
     margin-bottom:1em;
     transition: 0.2s ease;
+    justify-content: center;
+}
+
+#checkSubmit{
     display:flex;
     justify-content: center;
 }
 
-
 #checkNext{
     display:none;
+    justify-content: center;
 }
 
 #feedbackScreen{
@@ -222,7 +226,6 @@ fieldset{
     margin-top:1em;
     margin-bottom:1em;
     transition: 0.2s ease;
-    display:flex;
     justify-content: center;
 }
 
