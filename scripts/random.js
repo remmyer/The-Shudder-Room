@@ -159,6 +159,9 @@ const sugg3 = document.getElementById("sugg-3");
 const sugg4 = document.getElementById("sugg-4");
 const suggestionImages = [sugg1, sugg2, sugg3, sugg4];
 
+// whole "You may also like..." row
+const suggestionsRow = document.querySelector(".random-row");
+
 // placeholder poster (the TSR-style image)
 const PLACEHOLDER_POSTER = "../assets/posters/placeholder.png";
 
@@ -204,6 +207,11 @@ function resetToPlaceholder() {
   mainDesc.textContent =
     'Choose a subgenre above and hit "Randomize" to get a horror movie or show that matches your vibe.';
   chosenGenre.textContent = "Genre: " + getSelectedGenreLabel();
+
+  // hide "You may also like…" until first randomize
+  if (suggestionsRow) {
+    suggestionsRow.hidden = true;
+  }
 }
 
 // Core randomizer
@@ -225,6 +233,11 @@ function randomizeMovie() {
   mainDesc.textContent = mainMovie.desc;
   // show label exactly like the selector text
   chosenGenre.textContent = "Genre: " + getSelectedGenreLabel();
+
+  // show suggestions row once we’ve randomized
+  if (suggestionsRow) {
+    suggestionsRow.hidden = false;
+  }
 
   // pick suggestions (other movies from same subgenre)
   const suggIndices = getSuggestions(list, mainIndex);
