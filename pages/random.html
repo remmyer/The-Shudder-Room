@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Randomizer | The Shudder Room</title>
+
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/random.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap"
+    />
+
+    <script src="../scripts/random.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>THE SHUDDER ROOM</h1>
+    </header>
+
+    <nav>
+      <a class="navLink" href="movies.html">MOVIES/TV</a>
+      <a class="navLink" href="games.html">GAMES</a>
+      <a id="logo" href="../index.html">
+        <img alt="The Shudder Room logo" src="../assets/logo.png" />
+      </a>
+      <a class="navLink" href="quiz.html">QUIZ</a>
+      <a class="navLink" href="random.html">RANDOMIZER</a>
+    </nav>
+
+    <main id="random-page">
+      <!-- Matches HORROR MOVIES/SHOWS style -->
+      <h1 class="random-title">HORROR RANDOMIZER</h1>
+
+      <!-- SUBGENRE SELECT -->
+      <section class="random-form-box">
+        <fieldset>
+          <legend>
+            Pick a subgenre and we'll randomly generate a movie/show for you!
+          </legend>
+
+          <label for="subgenre">Subgenre</label>
+          <select id="subgenre">
+            <option value="paranormal">Paranormal</option>
+            <option value="slasher">Slasher</option>
+            <option value="foundfootage">Found Footage</option>
+            <option value="psychological">Psychological</option>
+            <option value="creature">Creature Feature</option>
+          </select>
+        </fieldset>
+      </section>
+
+      <!-- MAIN RANDOM RESULT -->
+      <section class="random-main">
+        <h3 id="chosen-genre">Genre: Paranormal</h3>
+        <br />
+
+        <!-- Layout grouping: section + figure instead of div -->
+        <!-- Picture element pattern based on MDN:
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture -->
+        <section class="random-main-inner">
+          <figure class="random-poster">
+            <picture>
+              <source
+                srcset="../assets/posters/placeholder-small.png"
+                media="(max-width: 600px)"
+              />
+              <img
+                id="main-poster"
+                src="../assets/posters/placeholder.png"
+                alt="Placeholder horror poster"
+              />
+            </picture>
+          </figure>
+
+          <article class="random-desc">
+            <!-- movie title with red gradient like the logo -->
+            <h4 id="main-title" class="movie-title-gradient">
+              Click "Randomize" to begin
+            </h4>
+            <p id="main-desc">
+              Choose a subgenre above and hit "Randomize" to get a horror movie
+              or show that matches your vibe.
+            </p>
+          </article>
+        </section>
+
+        <button id="random-btn" type="button">Randomize</button>
+      </section>
+
+      <!-- YOU MAY ALSO LIKE -->
+      <section class="random-row">
+        <h4>You may also like…</h4>
+
+        <section class="random-suggestions">
+          <article class="suggest-card">
+            <img
+              id="sugg-1"
+              src="../assets/posters/insidious.jpg"
+              alt="Suggestion 1"
+            />
+          </article>
+
+          <article class="suggest-card">
+            <img
+              id="sugg-2"
+              src="../assets/posters/talktome.jpg"
+              alt="Suggestion 2"
+            />
+          </article>
+
+          <article class="suggest-card">
+            <img
+              id="sugg-3"
+              src="../assets/posters/theconjuring.jpg"
+              alt="Suggestion 3"
+            />
+          </article>
+
+          <article class="suggest-card">
+            <img
+              id="sugg-4"
+              src="../assets/posters/firstomen.jpg"
+              alt="Suggestion 4"
+            />
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <h4>MADE BY VIVIANE</h4>
+      <hr />
+      <p>Media Attribution</p>
+      <ol>
+        <li>
+          <em>Insidious</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/insidious/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Talk to Me</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/talk-to-me-2022/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The Conjuring</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/the-conjuring/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The First Omen</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/the-first-omen/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Hereditary</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/hereditary/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Scream</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/scream/" target="_blank">link</a
+          >.
+        </li>
+
+        <li>
+          <em>Halloween</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/halloween/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Friday the 13th</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/friday-the-13th/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The Texas Chainsaw Massacre</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/the-texas-chainsaw-massacre/"
+            target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>A Nightmare on Elm Street</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/a-nightmare-on-elm-street/"
+            target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The Blair Witch Project</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/the-blair-witch-project/"
+            target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Paranormal Activity</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/paranormal-activity/"
+            target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>As Above, So Below</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/as-above-so-below/"
+            target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Cloverfield</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/cloverfield/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The Taking of Deborah Logan</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/the-taking-of-deborah-logan/"
+            target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Perfect Blue</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/perfect-blue/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The Silence of the Lambs</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/the-silence-of-the-lambs/"
+            target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Black Swan</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/black-swan/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The Babadook</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/the-babadook/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Gone Girl</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/gone-girl/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Stranger Things</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/stranger-things/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>Junji Ito Maniac</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/junji-ito-maniac-japanese-tales-of-the-macabre/"
+            target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>A Quiet Place</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/a-quiet-place/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The Ring</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/the-ring/" target="_blank"
+            >link</a
+          >.
+        </li>
+
+        <li>
+          <em>The Mist</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/the-mist/" target="_blank"
+            >link</a
+          >.
+        </li>
+      </ol>
+    </footer>
+  </body>
+</html>

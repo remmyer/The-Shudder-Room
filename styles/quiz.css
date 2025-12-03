@@ -10,7 +10,33 @@ fieldset{
 }
 
 #startScreen{
-    display:none;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    font-weight:600;
+    font-size:1.8rem;
+    background:linear-gradient(-280deg, rgb(26, 0, 0), rgb(63, 0, 0));
+    border-radius: 20px;
+    width:50%;
+    padding:1em;
+    margin:1em auto;
+    box-shadow: 0px 0px 8px 2px rgb(255, 0, 0);
+}
+
+#startScreen button{
+    padding:0.5em;
+    font-family: Nunito, Arial;
+    font-weight:800;
+    font-size:1.5rem;
+    border-radius:50px;
+    width:8em;
+    background:linear-gradient(to bottom right, rgb(100, 0, 0), rgb(150, 0, 0));
+    border-style: none;
+    border:1px solid white;
+    color:white;
+    transition: 0.8s ease;
+    margin-bottom:1em;
 }
 
 #questionNum{
@@ -98,7 +124,7 @@ fieldset{
 }
 
 #quizScreen{
-    display:flex;
+    display:none;
     flex-direction: column;
 }
 
@@ -135,10 +161,9 @@ fieldset{
     color:white;
     transition: 0.8s ease;
     margin-bottom:1em;
-    transition: 0.2s ease;
 }
 
-#scoreScreen button:hover, #checkboxScreen button:hover, #feedbackScreen button:hover, #checkboxScreen label:hover{
+#scoreScreen button:hover, #checkboxScreen button:hover, #feedbackScreen button:hover, #checkboxScreen label:hover, #startScreen button:hover{
     transition: 0.2s ease;
     box-shadow: 0px 0px 8px 2px rgb(255, 0, 0);
     cursor:pointer;
@@ -283,6 +308,9 @@ footer a{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         }
+    #startScreen{
+        width:70%;
+    }
     }
 
     @media (max-width:699px){

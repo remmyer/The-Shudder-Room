@@ -2,71 +2,186 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, intitial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Top Picks | Movies</title>
 
-    <link rel="stylesheet" type="text/css" href="../styles/movies.css" />
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/movies.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
+
     <script src="../scripts/movies.js" defer></script>
   </head>
 
   <body>
     <header>
-      <p>THE SHUDDER ROOM</p>
+      <h1>THE SHUDDER ROOM</h1>
     </header>
 
     <nav>
       <a class="navLink" href="movies.html">MOVIES/TV</a>
       <a class="navLink" href="games.html">GAMES</a>
       <a id="logo" href="../index.html">
-        <img alt="" src="../assets/logo.png" />
+        <img src="../assets/logo.png" alt="The Shudder Room logo" />
       </a>
-      <a class="navLink" href="pages/quiz.html">QUIZ</a>
+      <a class="navLink" href="quiz.html">QUIZ</a>
       <a class="navLink" href="random.html">RANDOMIZER</a>
     </nav>
 
     <main>
-      <section class="movie-picks">
-        <div class="carousel-wrapper">
-          <button id="carousel-left" class="carousel-arrow left">
-            <span class="material-symbols-outlined">arrow_back_ios_new</span>
-          </button>
+      <h1>HORROR MOVIES/SHOWS</h1>
+      <br />
 
-          <div id="movie-carousel" class="movie-carousel"></div>
+      <section class="carousel-wrapper" aria-label="Movie posters carousel">
+        <button id="carousel-left" class="carousel-arrow left" type="button">
+          ←
+        </button>
 
-          <button id="carousel-right" class="carousel-arrow right">
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-          </button>
-        </div>
+        <ul id="movie-carousel" class="movie-carousel">
+          <!-- JS inserts posters here -->
+        </ul>
 
-        <article id="movie-detail" class="movie-detail">
-          <div class="detail-video">
-            <iframe
-              id="movie-trailer"
-              src=""
-              title="Movie trailer"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <div class="detail-text">
-            <h3 id="movie-title">Select a movie</h3>
-            <p id="movie-desc">
-              Click a poster above to see the description and trailer.
-            </p>
-          </div>
-        </article>
+        <button id="carousel-right" class="carousel-arrow right" type="button">
+          →
+        </button>
       </section>
+
+      <article id="movie-detail" class="movie-detail">
+        <figure class="detail-video">
+          <iframe
+            id="movie-trailer"
+            src="..."
+            title="Movie trailer"
+            allowfullscreen
+          ></iframe>
+        </figure>
+
+        <section class="detail-text">
+          <h3 id="movie-title">Select a movie</h3>
+          <p id="movie-desc">
+            Click a poster above to see the description and trailer.
+          </p>
+        </section>
+      </article>
     </main>
-    <footer>MADE BY MOHIMA &amp; VIVIANE</footer>
+
+    <footer>
+      <hr />
+      <h4>MADE BY VIVIANE</h4>
+      <hr />
+
+      <p>Media Attribution</p>
+      <ol>
+        <li>
+          <em>The Silence of the Lambs</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/the-silence-of-the-lambs/"
+            target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=6iB21hsprAQ" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>The Blair Witch Project</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/the-blair-witch-project/"
+            target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=MBZ-POVsrlI" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>Insidious</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/insidious/" target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=ZuQuOnYnr3Q" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>Talk to Me</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/talk-to-me-2022/" target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=aLAKJu9aJys" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>Scream</em> (1996) poster from Letterboxd:
+          <a href="https://letterboxd.com/film/scream/" target="_blank">link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=U0LETmDvuXc" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>Perfect Blue</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/perfect-blue/" target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=2O09gQC-KvA" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>Junji Ito Maniac</em> poster from Letterboxd:
+          <a
+            href="https://letterboxd.com/film/junji-ito-maniac-japanese-tales-of-the-macabre/"
+            target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=A6dZKab7mRU" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>Stranger Things</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/stranger-things/" target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=mnd7sFt5c3A" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>The Conjuring</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/the-conjuring/" target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=ejMMn0t58Lc" target="_blank"
+            >here</a
+          >.
+        </li>
+
+        <li>
+          <em>The First Omen</em> poster from Letterboxd:
+          <a href="https://letterboxd.com/film/the-first-omen/" target="_blank"
+            >link</a
+          >, trailer
+          <a href="https://www.youtube.com/watch?v=lmN1Op8ygno" target="_blank"
+            >here</a
+          >.
+        </li>
+      </ol>
+    </footer>
   </body>
 </html>
